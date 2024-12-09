@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/interfaces/post';
+import { PostsService } from 'src/app/services/posts.service';
 
 
 @Component({
@@ -7,9 +9,22 @@ import { Post } from 'src/app/interfaces/post';
   templateUrl: './post-details.component.html',
   styleUrls: ['./post-details.component.scss'],
 })
-export class PostDetailsComponent {
+export class PostDetailsComponent implements OnInit{
 
-  @Input() post!: Post;
+  post?: Post;
+  
+  constructor(private postsService: PostsService, private route: ActivatedRoute) { } 
+  
+  ngOnInit(): void { 
+    const params = this.route.snapshot.paramMap; 
+    const id = params.get(params.keys[params.keys.length - 1]);
+    if (id) {
+      this.postsService.getPostById(id).subscribe({
+        next: response => this.post = response,
+        error: error => console.log(error)
+      });
+    }
+  }
 
   goToOriginPost() {
     throw new Error('Method not implemented.');
