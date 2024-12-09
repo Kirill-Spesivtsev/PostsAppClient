@@ -10,7 +10,7 @@
 
     <div >
         <div class="text-justify fs-6 mt-3 mb-5 px-5 post-content">
-            {{post.content}}
+            {{post.content | cutString: 2000}}
         </div>
     </div>
 
