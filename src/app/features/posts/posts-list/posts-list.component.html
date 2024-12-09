@@ -1,1 +1,13 @@
-<p>posts-list works!</p>
+
+<div class="row main-container-color">
+  <div class="col col-xxl-6 col-lg-8 col-md-10 col-sm-12 offset-xxl-3 offset-lg-2 offset-md-1 offset-sm-0">
+    <div *ngFor="let post of allPosts">
+      <app-post [post]="post"></app-post>
+    </div>
+  </div>
+</div>
+
+
+
+
+

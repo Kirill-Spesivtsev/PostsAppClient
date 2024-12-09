@@ -1,0 +1,51 @@
+.post-title {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.4rem;
+}
+
+.post-content {
+    text-align: justify;
+    color: rgb(123, 123, 123);
+    font-family: "Martian Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+      
+}
+
+.button-outline-circle { 
+    width: 40px; 
+    height: 40px; 
+    padding: 6px 0px; 
+    border-radius: 40px; 
+    font-size: 16px;
+    text-align: center; 
+}
+
+.image-panel :hover {
+    opacity: 1;
+    cursor: pointer;
+
+    & .button-floating {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+.origin-button{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
+}
+
+.cover-image{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}

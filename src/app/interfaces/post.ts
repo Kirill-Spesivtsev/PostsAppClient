@@ -1,9 +1,9 @@
 export interface Post { 
     id: string; 
     title: string; 
-    articleLink?: string; 
-    publicationDate?: Date; 
+    article_link?: string; 
+    pub_date?: Date; 
     creator?: string; 
     content: string; 
-    mediaUrl?: string; 
+    media_url?: string; 
 }
