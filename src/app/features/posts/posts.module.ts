@@ -4,12 +4,14 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { PostsListComponent } from './posts-list/posts-list.component';
 import { PostComponent } from './post/post.component';
 import { RouterModule } from '@angular/router';
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 
 @NgModule({
   declarations: [
     PostsListComponent,
     PostComponent,
+    PostDetailsComponent,
   ],
   imports: [
     CommonModule,
@@ -19,6 +21,7 @@ import { RouterModule } from '@angular/router';
   exports: [
     PostsListComponent,
     PostComponent,
+    PostDetailsComponent,
   ]
 })
 export class PostsModule { }

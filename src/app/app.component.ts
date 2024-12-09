@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PostsAppClient';
+  
+  constructor(private router: Router){}
 
+  search(query: string){
+    const navigationExtras: NavigationExtras = { queryParams: { query: query } }; 
+    this.router.navigate(['/posts'], navigationExtras);
+  }
 }
