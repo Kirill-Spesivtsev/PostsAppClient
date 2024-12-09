@@ -1,0 +1,20 @@
+.form-background {
+    background-color: #F8F7F4;
+    min-height: calc(100vh - 56px);
+}
+
+.center-form {
+    border: 3px solid #ffae90;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.input-container-height {
+    min-height: 105px;
+}
+
+.textarea-height {
+    min-height: 180px;
+}

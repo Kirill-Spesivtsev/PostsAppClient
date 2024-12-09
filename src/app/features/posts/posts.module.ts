@@ -5,6 +5,8 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { PostComponent } from './post/post.component';
 import { RouterModule } from '@angular/router';
 import { PostDetailsComponent } from './post-details/post-details.component';
+import { AddPostComponent } from './add-post/add-post.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({
@@ -12,11 +14,13 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     PostsListComponent,
     PostComponent,
     PostDetailsComponent,
+    AddPostComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule,
+    CoreModule
   ],
   exports: [
     PostsListComponent,
