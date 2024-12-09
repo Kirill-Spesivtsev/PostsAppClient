@@ -8,11 +8,5 @@ import { NavigationExtras, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'PostsAppClient';
-  
-  constructor(private router: Router){}
 
-  search(query: string){
-    const navigationExtras: NavigationExtras = { queryParams: { query: query } }; 
-    this.router.navigate(['/posts'], navigationExtras);
-  }
 }

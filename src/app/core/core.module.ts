@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
-],
+    NavbarComponent
+  ],
   imports: [
     CommonModule,
     RouterModule,
@@ -17,7 +19,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     NgxSpinnerModule
   ],
   exports:[
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    NavbarComponent
   ]
 })
 export class CoreModule { }

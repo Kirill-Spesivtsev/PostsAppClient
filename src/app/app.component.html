@@ -1,17 +1,8 @@
 <ngx-spinner type="square-jelly-box" bdColor="rgba(255,255,255,0.8)" size="large" color="#e95420" [fullScreen]="true"></ngx-spinner>
 
+<app-navbar></app-navbar>
 
-<nav class="navbar bg-primary" data-bs-theme="light">
-    <div class="container-fluid">
-        <a class="navbar-brand me-auto text-white" href="#">Random news feed</a>
-        <div class="d-inline-flex me-2">
-          <input #searchInput class="form-control me-2" (keydown.enter)="search(searchInput.value)" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success" (click)="search(searchInput.value)">Search</button>
-        </div>
-    </div>
-  </nav>
-
-<div class="row main-container pe-3">
+<div class="row main-container px-3">
     <div class="col col-xxl-6 col-lg-8 col-md-10 col-sm-12 offset-xxl-3 offset-lg-2 offset-md-1 offset-sm-0">
       <router-outlet/>
     </div>
