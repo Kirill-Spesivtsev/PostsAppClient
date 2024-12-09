@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Post } from 'src/app/interfaces/post';
 import { PostsService } from 'src/app/services/posts.service';
 
@@ -13,7 +14,7 @@ export class PostDetailsComponent implements OnInit{
 
   post?: Post;
   
-  constructor(private postsService: PostsService, private route: ActivatedRoute) { } 
+  constructor(private postsService: PostsService, private route: ActivatedRoute, private toastr: ToastrService, private router: Router) { } 
   
   ngOnInit(): void { 
     const params = this.route.snapshot.paramMap; 
@@ -26,12 +27,20 @@ export class PostDetailsComponent implements OnInit{
     }
   }
 
-  goToOriginPost() {
-    throw new Error('Method not implemented.');
-  }
-
-  deletePost() {
-    throw new Error('Method not implemented.');
+  deletePost(): void { 
+    if (this.post) {
+      if (window.confirm('Are you sure you want to delete this post?')) { 
+        this.postsService.deletePostById(this.post.id).subscribe({
+          next: () => {
+            this.router.navigate(['/posts'])
+            .then(() => {  
+              this.toastr.success("Post was deleted", "Success");
+            });
+          },
+          error: (error) => this.toastr.error("Error deleting post", "Error")
+        });
+      } 
+    }
   }
 
 }

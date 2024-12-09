@@ -1,5 +1,5 @@
   <div *ngFor="let post of filteredPosts">
-    <app-post [post]="post"></app-post>
+    <app-post [post]="post" [deletePostById]="deletePostById.bind(this)"></app-post>
   </div>
   <router-outlet/>
 

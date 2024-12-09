@@ -8,6 +8,7 @@ import { PostsModule } from './features/posts/posts.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CutStringPipe } from './pipes/cut-string.pipe';
 import { RouterModule } from '@angular/router';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [

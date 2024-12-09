@@ -11,7 +11,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     CommonModule,
     RouterModule,
     ToastrModule.forRoot({
-      positionClass: "toast-bottom-left",
+      positionClass: "toast-bottom-right",
       preventDuplicates: true
     }),
     NgxSpinnerModule
